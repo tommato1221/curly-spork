@@ -1,0 +1,16 @@
+# This is a basic workflow to help you get started with Actions
+
+name: upt
+
+on:
+  repository_dispatch:
+    types: [up]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a multi-line script
+        run: |
+          java -jar test.jar long
+          with:
+            long: ${{ github.event.client_payload.version }}
