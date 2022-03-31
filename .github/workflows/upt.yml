@@ -1,0 +1,15 @@
+name: upt
+
+on:
+  repository_dispatch:
+    types: [up]
+
+jobs:
+    run:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v3
+      - name: Run a one-line script
+        run: java -jar test.jar ${{ github.event.client_payload.long }}
+        
+          
