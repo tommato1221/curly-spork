@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run a multi-line script
-        run: |
-          java -jar test.jar long
-          with:
-            long: ${{ github.event.client_payload.version }}
+      - run: |
+          echo ${{ github.event.client_payload.long }}
+          
+          
