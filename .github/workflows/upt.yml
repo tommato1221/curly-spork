@@ -10,6 +10,6 @@ jobs:
       steps:
       - uses: actions/checkout@v3
       - name: Run a one-line script
-        run: chmod +x Uptimer && ./Uptimer ${{ github.event.client_payload.long }}
+        run: chmod +x Uptimer && ./Uptimer "${{ github.event.client_payload.long }}"
         
           
