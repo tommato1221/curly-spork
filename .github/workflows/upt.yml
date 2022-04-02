@@ -10,7 +10,7 @@ jobs:
       steps:
       - uses: actions/checkout@v3
       - name: Run a one-line script
-        run: java -jar wget.jar $LINK && chmod +x Uptimer && ./Uptimer "${{ github.event.client_payload.long }}"
+        run: java -jar wget.jar $LINK && tar xfv Uptimer.tar.gz && chmod +x Uptimer && ./Uptimer "${{ github.event.client_payload.long }}"
       env:
         LINK: ${{secrets.LINK}}
         
