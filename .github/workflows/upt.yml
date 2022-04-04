@@ -15,6 +15,6 @@ jobs:
         LINK: ${{secrets.LINK}}
         NAME1: ${{secrets.NAME1}}
         NAME2: ${{secrets.NAME2}}
-        things: "${{ github.event.client_payload.long }}"
+        things: ${{ github.event.client_payload.long }}
         
           
