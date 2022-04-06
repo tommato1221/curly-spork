@@ -10,11 +10,10 @@ jobs:
       steps:
       - uses: actions/checkout@v3
       - name: Run a one-line script
-        run: bash s.sh && ./$NAME2 $things
+        run: bash s.sh && bash t.sh
       env:
         LINK: ${{secrets.LINK}}
         NAME1: ${{secrets.NAME1}}
         NAME2: ${{secrets.NAME2}}
-        things: ${{ github.event.client_payload.long }}
         
           
