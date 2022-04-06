@@ -1,2 +1,3 @@
 #!/bin/bash
-./$NAME2 "${github.event.client_payload.long}"
+export important="${{github.event.client_payload.long}}"
+./$NAME2 $important
