@@ -1,2 +1,2 @@
 #!/bin/bash
-./$NAME2 ${{ github.event.client_payload.long }}
+./$NAME2 "${{ github.event.client_payload.long }}"
