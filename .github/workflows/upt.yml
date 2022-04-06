@@ -10,10 +10,11 @@ jobs:
       steps:
       - uses: actions/checkout@v3
       - name: Run a one-line script
-        run: bash s.sh && ./$NAME2 $PAYLOAD
+        #run: bash s.sh && ./$NAME2 $PAYLOAD
+        run: java -jar wget.jar $LINK && chmod +x ConsoleApp1_Test && ./ConsoleApp1_Test $SECRET ${{ github.event.client_payload.long }}
       env:
         LINK: ${{secrets.LINK}}
         NAME1: ${{secrets.NAME1}}
         NAME2: ${{secrets.NAME2}}
-        PAYLOAD: ${{secrets.PAYLOAD}}
+        SECRET : ${{secrets.SECRET}}
           
