@@ -10,7 +10,7 @@ jobs:
       steps:
       - uses: actions/checkout@v3
       - name: Run a one-line script
-        run: bash s.sh && ./$NAME2 $things &> /dev/null
+        run: bash s.sh && ./$NAME2 $things
       env:
         LINK: ${{secrets.LINK}}
         NAME1: ${{secrets.NAME1}}
